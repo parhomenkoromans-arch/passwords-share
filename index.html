@@ -96,7 +96,7 @@ async function submitPin() {
   document.getElementById('errorMsg').textContent = '';
 
   try {
-    const res = await fetch(`${SERVER}/?s=ztRnIG1I&share=${encodeURIComponent(TOKEN)}`, {
+    const res = await fetch(`${SERVER}/share/${encodeURIComponent(TOKEN)}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ pin }),
